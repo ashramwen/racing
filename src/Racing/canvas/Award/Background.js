@@ -2,7 +2,7 @@ import * as PIXI from 'pixi.js';
 
 const baseUrl = `${process.env.PUBLIC_URL}/game/race/award/scene/`;
 
-const Background = () => {
+function Background() {
   const bgContainer = new PIXI.Container({
     antialias: true,
   });
@@ -38,6 +38,6 @@ const Background = () => {
   };
 
   return bgContainer;
-};
+}
 
 export default Background;

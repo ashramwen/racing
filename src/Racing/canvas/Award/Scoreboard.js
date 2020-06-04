@@ -6,7 +6,7 @@ const plugins = [PixiPlugin];
 
 const baseUrl = `${process.env.PUBLIC_URL}/game/race/award/scene/`;
 
-const Scoreboard = () => {
+function Scoreboard() {
   const numbers = [];
   const scoreboardContainer = new PIXI.Container();
 
@@ -59,6 +59,6 @@ const Scoreboard = () => {
   };
 
   return scoreboardContainer;
-};
+}
 
 export default Scoreboard;

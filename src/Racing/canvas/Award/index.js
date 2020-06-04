@@ -8,7 +8,7 @@ import Scoreboard from './Scoreboard';
 // eslint-disable-next-line no-unused-vars
 const plugins = [PixiPlugin];
 
-const Award = () => {
+function Award() {
   const awardContainer = new PIXI.Container();
 
   const bg = new Background();
@@ -45,6 +45,6 @@ const Award = () => {
   };
 
   return awardContainer;
-};
+}
 
 export default Award;

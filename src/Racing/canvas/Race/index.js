@@ -3,7 +3,7 @@ import Background from './Background';
 import Timer from './Timer';
 import Car from './Car';
 
-const Race = () => {
+function Race() {
   const racingContainer = new PIXI.Container();
   racingContainer.initialized = false;
 
@@ -27,7 +27,7 @@ const Race = () => {
         const delta = Math.floor((new Date().valueOf() - initialTimer) / 1000);
         if (delta >= 6) {
           bg.start();
-          cars.forEach(o => o.start());
+          cars.forEach((o) => o.start());
         } else {
           go();
         }
@@ -63,10 +63,10 @@ const Race = () => {
     racingContainer.initialized = true;
     bg.init();
     timer.init();
-    cars.forEach(o => o.init());
+    cars.forEach((o) => o.init());
   };
 
   return racingContainer;
-};
+}
 
 export default Race;

@@ -46,7 +46,7 @@ const CROWN_POS = [
 
 const TEXT = ['冠军', '亚军', '季军'];
 
-const Car = ({ onComplete }) => {
+function Car({ onComplete }) {
   let keys = [38, 38, 40, 40, 37, 39, 37, 39, 65, 66, 65, 66];
   let keyIndex = 0;
   let end = false;
@@ -72,7 +72,7 @@ const Car = ({ onComplete }) => {
 
   window.addEventListener(
     'keydown',
-    e => {
+    (e) => {
       if (e.keyCode === keys[keyIndex]) {
         keyIndex++;
       } else {
@@ -132,8 +132,8 @@ const Car = ({ onComplete }) => {
     keyIndex = 0;
     end = false;
 
-    cars.forEach(o => carContainer.removeChild(o));
-    crowns.forEach(o => (o.visible = false));
+    cars.forEach((o) => carContainer.removeChild(o));
+    crowns.forEach((o) => (o.visible = false));
     cars = [];
     for (let i = 0; i < 3; i++) {
       const car = allCars[+ranking[i] - 1];
@@ -204,6 +204,6 @@ const Car = ({ onComplete }) => {
   };
 
   return carContainer;
-};
+}
 
 export default Car;

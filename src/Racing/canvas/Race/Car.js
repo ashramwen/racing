@@ -28,7 +28,7 @@ const getRandomInt = (min = MIN_X, max = MAX_X) => {
  * @param {*} index
  * @returns
  */
-const Car = index => {
+function Car(index) {
   let moving = Math.random() >= 0.5;
   let speed = getRandomInt(MAX_SPEED, MIN_SPEED);
   let _x = getRandomInt();
@@ -113,8 +113,8 @@ const Car = index => {
   );
 
   const breaking = () => {
-    turbo.forEach(o => (o.visible = false));
-    gearTickers.forEach(o => o.stop());
+    turbo.forEach((o) => (o.visible = false));
+    gearTickers.forEach((o) => o.stop());
   };
 
   /**
@@ -234,6 +234,6 @@ const Car = index => {
   };
 
   return carContainer;
-};
+}
 
 export default Car;

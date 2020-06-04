@@ -2,7 +2,7 @@ import * as PIXI from 'pixi.js';
 
 const baseUrl = `${process.env.PUBLIC_URL}/game/race/racing/timer/`;
 
-const Timer = () => {
+function Timer() {
   let angle = 270;
   const timerContainer = new PIXI.Container({
     antialias: true,
@@ -90,11 +90,11 @@ const Timer = () => {
   };
 
   timerContainer.init = () => {
-    timers.forEach(o => (o.visible = true));
-    numbers.forEach(o => (o.visible = false));
+    timers.forEach((o) => (o.visible = true));
+    numbers.forEach((o) => (o.visible = false));
   };
 
   return timerContainer;
-};
+}
 
 export default Timer;

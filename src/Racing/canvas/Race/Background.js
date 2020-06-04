@@ -5,7 +5,7 @@ import { PixiPlugin, TweenMax, Power1 } from 'gsap/all';
 const plugins = [PixiPlugin];
 const baseUrl = `${process.env.PUBLIC_URL}/game/race/racing/scene/`;
 
-const Background = () => {
+function Background() {
   let finishing = false;
 
   const bgContainer = new PIXI.Container();
@@ -208,6 +208,6 @@ const Background = () => {
   };
 
   return bgContainer;
-};
+}
 
 export default Background;

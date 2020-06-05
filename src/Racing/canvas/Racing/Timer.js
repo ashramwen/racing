@@ -1,6 +1,6 @@
 import * as PIXI from 'pixi.js';
 
-const baseUrl = `${process.env.PUBLIC_URL}/game/race/racing/timer/`;
+const baseUrl = `${process.env.PUBLIC_URL}/race/racing/timer/`;
 
 function Timer() {
   let angle = 270;

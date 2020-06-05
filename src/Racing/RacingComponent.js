@@ -1,10 +1,20 @@
-import React, { useEffect } from 'react';
-import Race from './canvas/App';
+import React, { useCallback, useEffect } from 'react';
+import Race from './canvas';
 
+const racingTime = 20000;
 let race;
 
-export function RacingComponent({ ranking }) {
+const RacingComponent = ({ ranking }) => {
   const pixiRef = React.createRef();
+
+  const verify = useCallback((standings) => {
+    if (standings.length !== 10) return false;
+
+    return !standings.find((o) => {
+      const n = Number(o);
+      return !Number.isInteger(Number(n)) || n > 10 || n < 0;
+    });
+  }, []);
 
   useEffect(() => {
     if (!race) {
@@ -19,15 +29,23 @@ export function RacingComponent({ ranking }) {
   }, [pixiRef]);
 
   useEffect(() => {
-    if (race.initialized()) {
-      race.start();
-      setTimeout(() => race.finish(ranking.split(',')), 10000);
-    }
+    const standings = ranking?.split(',');
+    if (!verify(standings)) return;
+
+    race.init();
+    // if (race.initialized()) {
+    race.start();
+    setTimeout(() => race.finish(standings), racingTime);
+    // }
     // 起跑，並在10秒後通過終點
     // ex: canvasAPI.start({ prevWinNum: prevHistory.get('winNum) });
-  }, [ranking]);
+  }, [verify, ranking]);
 
-  return <div ref={pixiRef} />;
-}
+  return (
+    <>
+      <div className="canvas" ref={pixiRef} />
+    </>
+  );
+};
 
 export default RacingComponent;

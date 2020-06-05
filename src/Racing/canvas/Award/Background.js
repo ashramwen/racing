@@ -1,6 +1,6 @@
 import * as PIXI from 'pixi.js';
 
-const baseUrl = `${process.env.PUBLIC_URL}/game/race/award/scene/`;
+const baseUrl = `${process.env.PUBLIC_URL}/race/award/scene/`;
 
 function Background() {
   const bgContainer = new PIXI.Container({

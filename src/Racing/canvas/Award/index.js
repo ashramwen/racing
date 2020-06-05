@@ -38,10 +38,10 @@ function Award() {
 
   awardContainer.addChild(bg, car, scoreboard);
 
-  awardContainer.init = (ranking = [], issueNum) => {
+  awardContainer.init = (ranking = []) => {
     bg.init();
     car.init(ranking);
-    scoreboard.init(ranking, issueNum);
+    scoreboard.init(ranking);
   };
 
   return awardContainer;

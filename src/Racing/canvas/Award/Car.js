@@ -4,7 +4,7 @@ import { PixiPlugin, TweenMax, Power1 } from 'gsap/all';
 // eslint-disable-next-line no-unused-vars
 const plugins = [PixiPlugin];
 
-const baseUrl = `${process.env.PUBLIC_URL}/game/race/award/car/`;
+const baseUrl = `${process.env.PUBLIC_URL}/race/award/car/`;
 
 const WIDTH = 1150 / 2;
 

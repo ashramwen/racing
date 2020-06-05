@@ -4,7 +4,7 @@ import { PixiPlugin, TweenMax } from 'gsap/all';
 // eslint-disable-next-line no-unused-vars
 const plugins = [PixiPlugin];
 
-const baseUrl = `${process.env.PUBLIC_URL}/game/race/award/scene/`;
+const baseUrl = `${process.env.PUBLIC_URL}/race/award/scene/`;
 
 function Scoreboard() {
   const numbers = [];
@@ -42,10 +42,10 @@ function Scoreboard() {
 
   scoreboardContainer.addChild(sprite);
 
-  scoreboardContainer.init = (ranking, issueNum) => {
+  scoreboardContainer.init = (ranking) => {
     sprite.y = 630;
 
-    text.text = `第 ${issueNum} 期  ｜  开奖号码`;
+    text.text = `比賽結果`;
 
     ranking.forEach((o, i) => {
       numbers[i].text = o;

@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Racing from './Racing';
-import './App.css';
+import './App.scss';
+import RankingInput from './RankingInput';
 
 function App() {
+  const [ranking, setRanking] = useState('');
+
   return (
     <div className="App">
-      <Racing />
+      <Racing ranking={ranking} />
+
+      <RankingInput setRanking={setRanking} />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { PixiPlugin, TweenMax, Power1 } from 'gsap/all';
 
 // eslint-disable-next-line no-unused-vars
 const plugins = [PixiPlugin];
-const baseUrl = `${process.env.PUBLIC_URL}/game/race/racing/scene/`;
+const baseUrl = `${process.env.PUBLIC_URL}/race/racing/scene/`;
 
 function Background() {
   let finishing = false;

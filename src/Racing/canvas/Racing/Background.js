@@ -13,42 +13,42 @@ function Background() {
 
   const sky = new PIXI.Sprite(PIXI.Texture.from(`${baseUrl}sky.png`));
 
-  const cloud0 = new PIXI.TilingSprite(
+  const cloud0 = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}cloud0.png`),
     1150,
     34
   );
   cloud0.y = 10;
 
-  const cloud1 = new PIXI.TilingSprite(
+  const cloud1 = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}cloud1.png`),
     1150,
     29
   );
   cloud1.y = 41;
 
-  const cloud2 = new PIXI.TilingSprite(
+  const cloud2 = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}cloud2.png`),
     1150,
     33
   );
   cloud2.y = 16;
 
-  const cloud3 = new PIXI.TilingSprite(
+  const cloud3 = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}cloud3.png`),
     1150,
     34
   );
   cloud3.y = 22;
 
-  const cloud4 = new PIXI.TilingSprite(
+  const cloud4 = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}cloud4.png`),
     1150,
     51
   );
   cloud4.y = 14;
 
-  const building = new PIXI.TilingSprite(
+  const building = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}building.png`),
     1150,
     90
@@ -58,35 +58,35 @@ function Background() {
   const ocean = new PIXI.Sprite(PIXI.Texture.from(`${baseUrl}ocean.png`));
   ocean.y = 109;
 
-  const water = new PIXI.TilingSprite(
+  const water = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}water.png`),
     1150,
     20
   );
   water.y = 112;
 
-  const grass = new PIXI.TilingSprite(
+  const grass = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}grass.png`),
     1150,
     65
   );
   grass.y = 85;
 
-  const fence = new PIXI.TilingSprite(
+  const fence = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}fence.png`),
     1150,
     25
   );
   fence.y = 145;
 
-  const boundary = new PIXI.TilingSprite(
+  const boundary = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}boundary.png`),
     1150,
     4
   );
   boundary.y = 170;
 
-  const boundary2 = new PIXI.TilingSprite(
+  const boundary2 = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}boundary2.png`),
     1150,
     6
@@ -94,7 +94,7 @@ function Background() {
   boundary2.y = 624;
   bgContainer.addChild(boundary2);
 
-  const roadTilingSprite = new PIXI.TilingSprite(
+  const roadTilingSprite = new PIXI.extras.TilingSprite(
     PIXI.Texture.from(`${baseUrl}road.png`),
     1150,
     361

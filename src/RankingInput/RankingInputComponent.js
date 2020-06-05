@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 
-function RankingInputComponent({ setRanking }) {
-  const [input, setInput] = useState('1,2,3,4,5,6,7,8,9,10');
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5).join(',');
 
-  // const genRanking = useCallback(() => Math.floor(Math.random() * 10) + 1, []);
+function RankingInputComponent({ setRanking }) {
+  const [input, setInput] = useState('');
 
   const handleChange = (e) => {
     setInput(e.target.value);
   };
 
   const handleClick = () => {
-    setRanking(input);
+    const ranking = shuffleArray(numbers);
+    setInput(ranking);
+    setRanking(ranking);
   };
 
   return (
     <div className="form">
-      <input type="text" value={input} onChange={handleChange} />
+      <input type="text" value={input} onChange={handleChange} readOnly />
       <button onClick={handleClick}>Go!</button>
     </div>
   );
